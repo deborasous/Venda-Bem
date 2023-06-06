@@ -1,0 +1,35 @@
+@use '../../styles/variables'
+@use '../../styles/mixins'
+
+#advantages
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr))
+  gap: 1rem
+  max-width: 1150px
+  margin: auto
+  padding: 20px variables.$spacing-lg 0
+  @include mixins.sm
+    padding-inline: variables.$spacing-sm
+    margin: auto
+  @include mixins.xs
+    grid-template-columns: 1fr
+
+  .advantage
+    display: flex
+    align-items: center
+    background: variables.$grayColor-300
+    padding: 10px 12px
+    border-radius: 6px
+
+
+    svg
+      font-size: 32px
+      margin-right: 10px
+      color: variables.$grayColor-400
+
+    .text
+      display: grid
+      gap: 4px
+
+      p
+        font-size: 14px
